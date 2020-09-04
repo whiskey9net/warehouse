@@ -14,7 +14,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
   bsd-mailx \
   && rm -rf /var/lib/apt/lists/* 
 
-#ADD main.cf /etc/postfix/main.cf
+ADD main.cf /etc/postfix/main.cf
 #ADD virtual /etc/postfix/virtual
 #RUN postmap /etc/postfix/virtual
 
