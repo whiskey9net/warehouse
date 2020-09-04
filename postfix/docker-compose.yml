@@ -4,4 +4,4 @@ services:
     build: .
     hostname: 'postfix'
     ports:
-      - 25:25
+      - '25:25'
