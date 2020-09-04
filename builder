@@ -20,3 +20,4 @@ git clone git@github.com:whiskey9net/warehouse.git  || exit 1
 cd /data/_builds/build_${TIMESTAMP}/warehouse/$PROJ || exit 1
 ls -l
 ./start
+docker ps

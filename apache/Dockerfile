@@ -1,3 +1,2 @@
-FROM ubuntu:18.04
+FROM httpd:2.4
 
-CMD sleep infinity
