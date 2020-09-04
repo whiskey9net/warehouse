@@ -4,6 +4,7 @@
 
 #--- ENV ---------------------------------------------
 
+SCHOME="/zbox/proj_warehouse/warehouse"
 DSTHOST="wh1.whiskey9.net"
 DSTHOST="62.77.157.57"
 DSTUSER="root"
@@ -19,7 +20,7 @@ echo
 
 echo ":::: RUN builder ..."
 echo ":::: scp builder ${DSTSSH}:/data/_builds/builder"
-scp builder ${DSTSSH}:/data/_builds/builder
+scp ${SCHOME}/builder ${DSTSSH}:/data/_builds/builder
 ssh ${DSTSSH} "chmod a+x /data/_builds/builder"
 ssh ${DSTSSH} "/data/_builds/builder $PROJ"
 
