@@ -1,0 +1,7 @@
+version: '2'
+services:
+  postfix:
+    build: .
+    hostname: 'postfix'
+    ports:
+      - 25:25
