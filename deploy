@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# WAREHOUSE PROJ 00/09
+
+#--- ENV ---------------------------------------------
+
+DSTHOST="wh1.whiskey9.net"
+DSTHOST="62.77.157.57"
+DSTUSER="root"
+DSTSSH="${DSTUSER}@${DSTHOST}"
+PROJ=$1
+
+#-----------------------------------------------------
+
+echo "*****************************"
+echo "    WAREHOUSE PROJ 00/09"
+echo "*****************************"
+echo
+
+echo ":::: RUN builder ..."
+echo ":::: scp builder ${DSTSSH}:/data/_builds/builder"
+scp builder ${DSTSSH}:/data/_builds/builder
+ssh ${DSTSSH} "chmod a+x /data/_builds/builder"
+ssh ${DSTSSH} "/data/_builds/builder $PROJ"
+
+
